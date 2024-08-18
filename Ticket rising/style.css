@@ -1,0 +1,146 @@
+/* input{
+    width:100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+textarea{
+    width:100%;
+    height: 150px;
+    outline: none;
+    background-color:  #dce7f7;
+    border:none;
+}
+label{
+    color:blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+body{
+    display:grid;
+    place-items: center;
+        color: blue;
+}
+h3{
+    background-color: #181880;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+tr{
+    line-height: 50px;
+}
+td{
+    text-align: right;
+}
+.dropdown1{
+    width:180px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin-right: 1px;
+}
+.dropdown2{
+    width:180px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none
+}
+#frm{
+    width: 70%;
+}
+#btn{
+    color:white;
+    width:100px;
+    height: auto;
+    background-color: #181880;
+}
+ */
+ body {
+    display: grid;
+    place-items: center;
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#frm {
+    width: 70%;
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    background-color: #181880;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+label {
+    color: blue;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea,
+select {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 150px;
+    background-color: #dce7f7;
+    resize: none;
+}
+
+.dropdown1,
+.dropdown2 {
+    width: calc(100% - 10px);
+    margin-right: 1px;
+}
+
+button#btn {
+    color: white;
+    background-color: #181880;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#btn:hover {
+    background-color: #151566;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: right;
+    padding: 10px 5px;
+}
+
+tr {
+    line-height: 50px;
+}
+
+td:nth-child(odd) {
+    text-align: left;
+}
+

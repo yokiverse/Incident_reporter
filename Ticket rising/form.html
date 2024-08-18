@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+<form action="insert.php" method="post" id="frm">
+    <table width="100%">
+    <tr><td><label>REPORTED BY:</label></td>
+        <td><input type="text" name="name" required></td>
+        <td><label>DATE OF REPORT:</label></td>
+        <td><input type="datetime-local" name="dor" required></td>
+    </tr>
+    <tr><td><label>TITLE/ROLE:</label></td>
+        <td><input type="text" name="title" required></td>
+        <td><label>INNCIDENT NO.:</label></td>
+        <td><input type="text" name="incino" id="num" readonly required></td>
+    </tr>
+    </table>
+    <h3>INCIDENT INFORMATION</h3>
+    <table width="100%">
+    <tr><td><label>INCIDENT TYPE:</label></td>
+        <td><input type="text" name="incitype"></td>
+        <td colspan="3"><label>DATE OF INCIDENT:</label></td>
+        <td><input type="text" name="incidate" placeholder=" yyyy/mm/dd"></td>
+    </tr>
+    <tr><td><label>LOCATION:<label></td>
+        <td colspan="6"><input type="text" name="locate" required></td>
+    </tr>
+    <tr><td><label>CITY:</label></td>
+        <td>
+            <select name="city" class="dropdown1" required>
+                <option>CHENNAI</option>
+                <option>WAYANAD</option>
+                <option>COIMBATURE</option>
+                <option>THIRUVANANDHAPURAM</option>
+                <option>MADURAI</option>
+            </select>
+         </td>   
+        <td><label>STATE:</label></td>
+        <td>
+            <select name="state" class="dropdown2" required>
+                <option>TAMIL NADU</option>
+                <option>KERALA</option>
+            </select>
+        </td>
+        <td><label>ZIP CODE:</label></td>
+        <td><input type="text" name="zip" required></td>
+    </tr>
+    </table>
+        <div>
+            <label>INCIDENT DESCRIPTION</label>
+            <br>
+            <textarea name="incides" required></textarea>
+            <br>
+            <label>FOLLOW UP ACTION</label>
+            <br>
+            <textarea name="act" required></textarea>
+        </div>
+        <button  name="submit" id="btn">ENTER</button>
+        <script>
+        function incrementIncidentNumber() {
+            let currentNumber = localStorage.getItem('incidentNumber');
+            let nextNumber = currentNumber ? parseInt(currentNumber) + 1 : 1;
+            localStorage.setItem('incidentNumber', nextNumber);
+            document.getElementById('num').value = nextNumber;
+        }
+        document.addEventListener('DOMContentLoaded', incrementIncidentNumber);
+    </script>
+    </form>
+</body>
+</body>
+</html>
